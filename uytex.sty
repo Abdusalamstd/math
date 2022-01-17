@@ -1,0 +1,222 @@
+% lyanry book style package
+\ProvidesPackage{uytex}
+\usepackage[explicit]{titlesec}
+\usepackage[cmyk,table]{xcolor}
+
+\usepackage{tikz,lipsum,lmodern}
+\usepackage{tcolorbox}
+\usepackage{listings}
+
+%\tcbuselibrary{listingsutf8,listings,minted}
+%\tcbuselibrary{skins,listings,hooks,raster,breakable,xparse,vignette,listingsutf8,theorems,hooks}
+
+
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{eso-pic}
+
+\usepackage{varwidth}
+\usetikzlibrary{shadows}
+\usetikzlibrary{shadings}
+
+\usepackage{pdfpages}
+
+
+%\usepackage[pages=some]{background}
+%\backgroundsetup{scale=1,angle=0,opacity=0.1,contents={ \includegraphics[width=\paperwidth, height=\paperwidth, keepaspectratio]{Python.eps}}}
+
+%\usepackage{wallpaper}
+%\CenterWallPaper{1}{grassland.jpg}
+
+%\usepackage[abs]{overpic}
+%\begin{overpic}[scale=0.05]{grassland.jpg}\put(34,5){\includegraphics[scale=0.007]{grassland.jpg}}\end{overpic}
+
+
+\usepackage{polyglossia}
+\usepackage{fontspec}
+
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{calc}
+
+\tcbuselibrary{skins,xparse,minted,listings,listingsutf8}
+\tcbuselibrary{skins,listings,hooks,raster,breakable,xparse,vignette,listingsutf8,theorems,hooks}
+
+% Set Font
+\setmainlanguage{uyghur}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1,Path = uyFonts/,
+UprightFont = UKIJ Ekran.ttf,BoldFont = UKIJ Ekran Bold.ttf]{}
+%\newfontfamily\arabicfont[Script=Arabic,Scale=1,Path = uyFonts/]{UKIJCJK.ttf}
+%\newfontfamily\arabicfont[Script=Arabic,Scale=1]{segoeui.ttf}
+%\let\arabicfonttt\ttfamily
+\setotherlanguage[variant=british]{english}
+%\setmainfont [Path = uyFonts/] {UKIJ Ekran.ttf}
+%\setsansfont [Path = uyFonts/] {UKIJQolyazma.ttf}
+%\setmonofont[Path = uyFonts/] {UKIJTeng.ttf}
+%\setmonofont[Path=uyFonts/]{ALKATIP Tuz Tom.ttf}
+%{UKIJ Ekran.ttf}{ALKATIP Gezit Tom.ttf}{ALKATIP Tuz Tom.ttf}
+\newcommand{\HUGE}{\fontsize{50}{60}}
+% {\fontsize{16pt}{1.25em} \selectfont  ... }
+% \fontsize{16pt}{\baselineskip}\selectfont
+
+\input{defcolors.tex}
+
+\input{deffonts.tex}
+
+\input{sectionstyle.tex}
+
+\input{codestyle.tex}
+
+%%%%%%%%%%%%%%%
+\newtcbox{\redbox}[1][red]{on line,
+arc=0pt,outer arc=0pt,colback=#1!10!white,colframe=#1!50!black,
+boxsep=0pt,left=1pt,right=1pt,top=2pt,bottom=2pt,
+boxrule=0pt,bottomrule=1pt,toprule=1pt}
+
+\newtcbox{\xmybox}[1][red]{on line,
+arc=7pt,colback=#1!10!white,colframe=#1!50!black,
+before upper={\rule[-3pt]{0pt}{10pt}},boxrule=1pt,
+boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
+\newtcbox{\simplebox}{arc=7pt,colback=yellow,colframe=red,before upper={\rule[-3pt]{0pt}{10pt}},boxrule=1pt,boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
+%%%%%%%%%%%%%%%%%% TColorBoX Definations,Theorems
+%\begin{theorem}
+% Counters : [use counter from=mytheorem],[number within=section]
+%\newtcbtheorem[number within=section]{theorem}{تېئورما}{%
+%fonttitle=\alkufi,fontupper=\itshape,coltitle=blue!50!black,enhanced, colback=green!5!white,colbacktitle=green!25!white,attach boxed title to top,
+%boxed title style={colframe=red}}{theo}
+%\end{mytheo}
+%\newtcbtheorem[number within=section]{mytheorem}{تېئورما}%
+%{colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
+
+%%%%%%%%%%% Defination %%%%%%%%
+\definecolor{ForestGreen}{rgb}{0.13, 0.55, 0.13}
+\newtcbtheorem[number within=section]{WhiteRule}{{\alkufi خۇسۇسىيەت}}%
+{enhanced,frame empty,interior empty,colframe=ForestGreen!50!white,
+coltitle=ForestGreen!50!black,fonttitle=\bfseries,colbacktitle=ForestGreen!15!white,
+borderline={0.5mm}{0mm}{ForestGreen!15!white},
+borderline={0.5mm}{0mm}{ForestGreen!50!white,dashed},
+attach boxed title to top center={yshift=-2mm},
+boxed title style={boxrule=0.4pt},varwidth boxed title}{theo}
+
+\newtcbtheorem[number within=section]{MyTheorem}{{\alkufi تېئورما}}
+{%theorem style=change apart,
+frame empty,interior empty,enhanced,arc=0mm,outer arc=0mm,boxrule=0mm,toprule=1mm, bottomrule=1mm,left=1mm,right=1mm,titlerule=0mm,toptitle=0mm,bottomtitle=1mm,top=0mm,
+colframe=cyan!50!black,colback=cyan!5!white,coltitle=red,
+title style={top color=cyan!50!white,bottom color=cyan!5!white,middle color=cyan!50!white},
+fonttitle=\bfseries\normalsize,
+%fonttitle=\bfseries\sffamily\normalsize,fontupper=\normalsize\itshape,
+}{theo}
+
+
+%%%%%%%%%% Environment MyDefination  %%%%%%%%%%%
+\tcbset{
+defstyle/.style={fonttitle=\bfseries\upshape, fontupper=\slshape, arc=0mm, colback=blue!5!white,colframe=blue!75!black},
+}
+\newtcbtheorem[number within=section,crefname={definition}{definitions}]{MyDefinition}{{\alkufi ئېنىقلىما}}{defstyle}{def}
+
+
+%%%%%%%%%% Environment Defination 
+\newenvironment{defination}[1][\textuyghur{ئېنىقلىما}]
+{     \newcommand\deftitle{#1}	
+      \begin{tcolorbox}[colback=red!5!white,colframe=red!75!black,title=\deftitle]
+}
+{\end{tcolorbox}}
+
+%%%%%%%%%% Environment note
+\newenvironment{note}[1][{\faIcon{oil-can}} \textuyghur{يىغىنچاقلاش}]
+{\alkufi
+	\newcommand\notetitle{#1}
+	\begin{tcolorbox}[enhanced,attach boxed title to top right={yshift=-3mm, yshifttext=-1mm}, colback=blue!5!white, colframe=blue!75!black, colbacktitle=red!80!black, title=\notetitle, fonttitle=\bfseries,boxed title style={size=small, colframe=red!50!black} ]
+}
+{\end{tcolorbox}}
+
+%%%%%%%%%% Environment indicate
+\newenvironment{indicate}[1][{\faIcon{lightbulb}} \textuyghur{كۆرسەتمە}]
+{\algezit
+	\newcommand\indicatetitle{#1}
+	\begin{tcolorbox}[enhanced,attach boxed title to top right={yshift=-3mm, yshifttext=-1mm},colback=green!5!white,colframe=green!75!black,colbacktitle=red!80!black, title=\indicatetitle,fonttitle=\bfseries,boxed title style={size=small, colframe=blue!50!black}]
+}
+{\end{tcolorbox}}
+
+%%%%%%%%%% BackColor Text %%%%%%%%%%%%
+\newenvironment{colorful}[1][green]
+{\begin{tcolorbox}[colback=#1!10!white,colframe=#1!50!black, leftrule=0pt,toprule=0pt,rightrule=5pt,bottomrule=0pt,arc=0pt,outer arc=0pt,top=12pt]}
+{\end{tcolorbox}}
+
+
+
+%%%%%%%%%%%%%%%
+\newenvironment{important}[1][]
+{\algezitb
+	\begin{tcolorbox}[enhanced,arc=3mm,boxrule=1.5mm,boxsep=1.5mm,
+	colback=yellow!20!white,colframe=blue,borderline={1mm}{1mm}{white},
+	borderline={1mm}{2mm}{red}]
+}
+{\end{tcolorbox}}
+%%%%%%%%%%%%%%%%% Define Example Box %%%%%%%%%%%
+\newenvironment{example}[1][]
+{\begin{tcolorbox}[enhanced,colback=yellow!0!white,frame hidden,title={\alkufi مىسال},attach boxed title to top right,boxed title style={size=small,colback=blue},
+borderline north={1mm}{-2mm}{red},
+borderline south={1mm}{-2mm}{blue},
+borderline west={1mm}{-2mm}{green},
+borderline east={1mm}{-2mm}{yellow}]}
+{\end{tcolorbox}}
+
+%%
+\colorlet{colexam}{blue}%{green!85!black}
+\newtcolorbox[use counter=part]{myexample}{%
+	empty,title={\textcolor{red}{\faIcon{wrench}} \alkitab\textbf{\thetcbcounter - مەشىق}},attach boxed title to top right,
+	boxed title style={empty,size=minimal,toprule=2pt,top=4pt,
+	overlay={\draw[colexam,line width=4pt]
+			([yshift=-1pt]frame.south east)--([yshift=-1pt]frame.south west);}},
+coltitle=colexam,%fonttitle=\Large\bfseries,
+	before=\par\medskip\noindent,parbox=false,boxsep=0pt,left=0pt,right=3mm,top=4pt,
+	breakable,pad at break*=0mm,vfill before first,
+	overlay unbroken={\draw[colexam,line width=1pt]
+		([yshift=-1pt]title.south east)--([xshift=-0.5pt,yshift=-1pt]title.south-|frame.west)
+		--([xshift=-0.5pt]frame.south west)--(frame.south east); },
+	overlay first={\draw[colexam,line width=1pt]
+		([yshift=-1pt]title.south east)--([xshift=-0.5pt,yshift=-1pt]title.south-|frame.west)
+		--([xshift=-0.5pt]frame.south west); },
+	overlay middle={\draw[colexam,line width=1pt] ([xshift=-0.5pt]frame.north west)
+		--([xshift=-0.5pt]frame.south west); },
+	overlay last={\draw[colexam,line width=1pt] ([xshift=-0.5pt]frame.north west)
+		--([xshift=-0.5pt]frame.south west)--(frame.south east);},%
+}
+
+%%%%%%%%%%%%%%% Home Work Style %%%%%%%%%%%
+\NewTColorBox[auto counter,number within=section]{exercise}{+!O{}}{%
+enhanced,colframe=green!20!black,colback=yellow!10!white,coltitle=green!40!black,
+fonttitle=\bfseries,
+underlay={\begin{tcbclipinterior}
+\shade[inner color=green!80!yellow,outer color=yellow!10!white]
+(interior.north west) circle (2cm);
+\draw[help lines,step=5mm,yellow!80!black,shift={(interior.north west)}]
+(interior.south west) grid (interior.north east);
+\end{tcbclipinterior}},
+title={\textuyghur{مەشىق}~\thetcbcounter:},
+label={exercise@\thetcbcounter},
+attach title to upper=\quad,
+after upper={\par\hfill\textcolor{green!40!black}%
+{\itshape \textuyghur{جاۋابى: }~\pageref{solution@\thetcbcounter} \textuyghur{بەتتە}}},
+lowerbox=ignored,
+savelowerto=solutions/exercise-\thetcbcounter.tex,
+record={\string\solution{\thetcbcounter}{solutions/exercise-\thetcbcounter.tex}},
+#1
+}
+
+\NewTotalTColorBox{\solution}{mm}{%
+enhanced,colframe=red!20!black,colback=yellow!10!white,coltitle=red!40!black,
+fonttitle=\bfseries,
+underlay={\begin{tcbclipinterior}
+\shade[inner color=red!50!yellow,outer color=yellow!10!white]
+(interior.north west) circle (2cm);
+\draw[help lines,step=5mm,yellow!80!black,shift={(interior.north west)}]
+(interior.south west) grid (interior.north east);
+\end{tcbclipinterior}},
+%title={Solution of Exercise~\ref{exercise@#1} on page~\pageref{exercise@#1}:},
+title={~\pageref{exercise@#1}-\textuyghur{بەتتىكى مەشىق }~\ref{exercise@#1} \textuyghur{نىڭ يېشىمى تۆۋەندىكىچە:}},
+phantomlabel={solution@#1},
+attach title to upper=\par,
+}{\input{#2}}
+

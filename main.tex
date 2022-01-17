@@ -1,0 +1,244 @@
+\documentclass[a4paper,openany]{book}
+%\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage[colorlinks,linkcolor=red]{hyperref}
+\usepackage{graphicx}
+\usepackage{empheq}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{tabularx}
+
+\usepackage{varwidth}
+\usepackage{varioref}
+\usepackage{cleveref} 
+\usepackage{empheq}
+
+\usepackage{picinpar}
+
+\usepackage{appendix}
+\usepackage{titling}
+\usepackage{uytex}
+
+\usepackage{pgfplots}
+\usepackage{tikzpeople}
+
+\usepackage[normalem]{ulem}  %%Wavy line
+\usepackage{fontawesome5}
+
+\usetikzlibrary{arrows.meta}
+
+\newcommand\MATH{\textuyghur{ماتېماتىكا}}
+
+%\geometry{left=1.25cm,right=1.25cm,top=1.25cm,bottom=1.25cm}
+\geometry{left=1cm,right=1cm,top=1cm,bottom=1cm}
+%\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
+%\geometry{inner=2cm,outer=2cm}
+
+
+\title{ماتېماتىكىدىن ئاساس}
+\author{Abdusalam}
+\date{\today}
+
+\hypersetup{%
+pdftitle = {ماتىماتىكىدىن ئاساس},
+pdfsubject = {ماتىماتىكا},
+pdfkeywords = {ماتىماتىكا, ئالگېبرا, گېئومتېرىيە},
+pdfauthor = {\textcopyright\ Abdusalam},
+pdfcreator = {\LaTeX and xeLaTeX},
+pdfproducer = {xelatex},
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%\includepdf[pages={1}]{chapter/bookcover.pdf}
+\input{AdvancedMath/cover.tex}
+\newpage
+\input{AdvancedMath/lisiofcontents.tex}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{page}{1}
+\part{ئالىي ماتېماتىكا}
+\newcommand\yfx{$y=f(x)$}
+
+\input{AdvancedMath/chapter1.tex}
+\newpage
+\input{AdvancedMath/chapter2.tex}
+\newpage
+\input{AdvancedMath/chapter3.tex}
+\newpage
+\input{AdvancedMath/chapter4.tex}
+\newpage
+\input{AdvancedMath/chapter5.tex}
+\newpage
+\input{AdvancedMath/chapter6.tex}
+\newpage
+\input{AdvancedMath/chapter7.tex}
+\newpage
+\input{AdvancedMath/chapter8.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{ئالگېبرا}
+\newpage
+\input{LinearAlgebra/chapter1.tex}
+\newpage
+\input{LinearAlgebra/chapter2.tex}
+\newpage
+\input{LinearAlgebra/chapter3.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\begin{WhiteRule}{جۇڭگو نېفىت ئۇنىۋېرسىتېتى}{}%
+جۇڭگو نېفىت ئۇنىۋېرسىتېتى مائارىپ مىنىستىرلىكى قارمىقىدىكى دۆلەتلىك مۇھىم ئۇنىۋېرسىتېت ، ئۇ دۆلەتنىڭ «211 تۈرى» نىڭ مۇھىم قۇرۇلۇشى ۋە «985 تۈر ئەۋزەللىكى ئىنتىزامى يېڭىلىق يارىتىش» نى تەرەققىي قىلدۇرۇش ئۈچۈن ئاسپىرانتلىق مەكتىپى قۇرغان ئۇنىۋېرسىتېتلارنىڭ بىرى.
+\begin{equation*}
+f(x)-f(x_0) = \operatorname{grad} f(\xi)^{\top}(x-x_0)
+\end{equation*}
+\end{WhiteRule}\par\bigskip
+
+\begin{MyTheorem}{جۇڭگو نېفىت ئۇنىۋېرسىتېتى}{}%
+جۇڭگو نېفىت ئۇنىۋېرسىتېتى مائارىپ مىنىستىرلىكى قارمىقىدىكى دۆلەتلىك مۇھىم ئۇنىۋېرسىتېت ، ئۇ دۆلەتنىڭ «211 تۈرى» نىڭ مۇھىم قۇرۇلۇشى ۋە «985 تۈر ئەۋزەللىكى ئىنتىزامى يېڭىلىق يارىتىش» نى تەرەققىي قىلدۇرۇش ئۈچۈن ئاسپىرانتلىق مەكتىپى قۇرغان ئۇنىۋېرسىتېتلارنىڭ بىرى.
+\begin{equation*}
+f(x)-f(x_0) = \operatorname{grad} f(\xi)^{\top}(x-x_0)
+\end{equation*}
+\end{MyTheorem}
+
+%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{note}
+ئالدىنقى مەزمۇنلاردا سانلار قاتارى ھەقتە مەزمۇنلار خاتېرلەنگەن ئىدى. 
+\textcolor{green}{\faIcon{hammer}}
+بولۇپمۇ تەڭ ئايرىمىلىق   سانلار ئارقىمۇ-ئارقىلىقى ۋە تەڭ نىسبەتلىك سانلار ئارقىمۇ-ئارقىلىقى ئۈستىدە تەپسىلىي نۇقتىلار يېزىلدى. ئەمدى بۇ باپتا قاتار ئۇقۇمى بىلەن تونۇشۇپ چىقىمىز. قاتار دېگەن نۇرغۇنلىغان ئېلمىنتلارنىڭ يىغىندىسىدىن تەركىپ تاپقان ئىپادە بولۇپ، چەكسىز قاتار بولسا چەكسىز ئېلمىنتلار قاتارىنى كۆرسىتىدۇ.
+\end{note}
+
+
+\begin{indicate}
+	\begin{minipage}[b]{0.85\linewidth}
+ئالدىنقى مەزمۇنلاردا سانلار قاتارى ھەقتە مەزمۇنلار خاتېرلەنگەن ئىدى. 
+\textcolor{green}{\faIcon{hammer}}
+بولۇپمۇ تەڭ ئايرىمىلىق   سانلار ئارقىمۇ-ئارقىلىقى ۋە تەڭ نىسبەتلىك سانلار ئارقىمۇ-ئارقىلىقى ئۈستىدە تەپسىلىي نۇقتىلار يېزىلدى. ئەمدى بۇ باپتا قاتار ئۇقۇمى بىلەن تونۇشۇپ چىقىمىز. قاتار دېگەن نۇرغۇنلىغان ئېلمىنتلارنىڭ يىغىندىسىدىن تەركىپ تاپقان ئىپادە بولۇپ، چەكسىز قاتار بولسا چەكسىز ئېلمىنتلار قاتارىنى كۆرسىتىدۇ.
+	\end{minipage}
+	\hfil
+	\begin{minipage}[b]{0.1\linewidth}
+		\begin{tikzpicture}
+			\node[graduate,minimum size=1.25cm]{};
+		\end{tikzpicture}
+	\end{minipage}
+\end{indicate}
+
+\fbox{\fbox{\parbox{\linewidth}{
+ئالدىنقى مەزمۇنلاردا \uline{سانلار قاتارى} ھەقتە مەزمۇنلار \uwave{خاتېرلەنگەن} ئىدى. بولۇپمۇ تەڭ ئايرىمىلىق \xout{سانلار} ئارقىمۇ-ئارقىلىقى ۋە تەڭ \uuline{نىسبەتلىك} سانلار ئارقىمۇ-ئارقىلىقى ئۈستىدە \sout{تەپسىلىي} نۇقتىلار. \dashuline{ئەمدى} بۇ باپتا قاتار ئۇقۇمى بىلەن \dotuline{تونۇشۇپ} چىقىمىز.
+}}}
+
+
+\begin{myexample}
+	قاتار
+	$\sum\limits_{n=1}^\infty\left(n\sin\dfrac{1}{n}\right)^{n^3}$
+	يىغىلىشچانلىقىغا ھۆكۈم قىلىڭ.
+	\\\rule{\linewidth}{0.05em}\\
+	
+	$u_n=\left(n\sin\dfrac{1}{n}\right)^{n^3}$
+	شۇڭا،\\
+	$$\lim\limits_{n\to\infty}\sqrt[n]{u_n}=\lim\limits_{n\to\infty}\left(n\sin\dfrac{1}{n}\right)^{n^2}=e^{\lim\limits_{n\to\infty}n^(n\sin\frac{1}{n}-1)}=e^{\lim\limits_{n\to\infty}\dfrac{\sin\frac{1}{n}-\frac{1}{n}}{\frac{1}{n^3}}}=e^{-\frac{1}{6}}<1$$
+	شۇڭا يىغىلىدۇ.
+\end{myexample}
+ 
+ شۇنىڭ بىلەن
+ \begin{colorful}[cyan]
+ 	فۇنكىسىيە قاتارى دېگىنىمىز ئومۇمىي ئەزاسى مەلۇم ئۆزگەرگۈچى مىقدارنىڭ فۇنكىسىيىسى بولغان قاتارنى كۆرسىتىدۇ. فۇنكىسىيە قاتارنىڭ شەكلىنى تۆۋەندىكىدەك ئىپادىلەشكە بولىدۇ:
+ \end{colorful} 
+
+\begin{colorful}[violet]
+	فۇنكىسىيە قاتارى دېگىنىمىز ئومۇمىي ئەزاسى مەلۇم ئۆزگەرگۈچى مىقدارنىڭ فۇنكىسىيىسى بولغان قاتارنى كۆرسىتىدۇ. فۇنكىسىيە قاتارنىڭ شەكلىنى تۆۋەندىكىدەك ئىپادىلەشكە بولىدۇ:
+\end{colorful} 
+
+\begin{colorful}[teal]
+	فۇنكىسىيە قاتارى دېگىنىمىز ئومۇمىي ئەزاسى مەلۇم ئۆزگەرگۈچى مىقدارنىڭ فۇنكىسىيىسى بولغان قاتارنى كۆرسىتىدۇ. فۇنكىسىيە قاتارنىڭ شەكلىنى تۆۋەندىكىدەك ئىپادىلەشكە بولىدۇ:
+\end{colorful} 
+
+\begin{colorful}[purple]
+	فۇنكىسىيە قاتارى دېگىنىمىز ئومۇمىي ئەزاسى مەلۇم ئۆزگەرگۈچى مىقدارنىڭ فۇنكىسىيىسى بولغان قاتارنى كۆرسىتىدۇ. فۇنكىسىيە قاتارنىڭ شەكلىنى تۆۋەندىكىدەك ئىپادىلەشكە بولىدۇ:
+\end{colorful} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{ئېھتىماللىق نەزىرىيىسى}
+
+%\input{AdvancedMath/}
+%\input{Probability/}
+%\input{LinearAlgebra/}
+
+
+
+\newpage
+\setcounter{page}{1}
+%\input{chapter/chapter0.tex}
+
+
+
+\newpage
+\section*{مەشىقلەرنىڭ پايدىلىنىش جاۋاب كودى}
+%\tcbinputrecords  %Write recorded answer
+
+\newpage
+%\input{chapter/appdix.tex}
+
+%\newpage
+%\listoftables
+
+%\newpage
+%\listoffigures
+
+%\section{پايدىلانمىلار}
+
+
+\begin{thebibliography}{9}
+\begin{english}
+	\bibitem{latexcompanion} 
+	\textenglish{
+	Michel Goossens, Frank Mittelbach, and Alexander Samarin. \\
+	\textit{The \LaTeX\ Companion}. 
+	Addison-Wesley Reading Mass, 2004.
+	}
+	\bibitem{einstein} 
+	\textenglish{
+	Hubert Partl, Irene Hyna, and Elisabeth Schlegl. 
+	\url{https://www.ctan.org/tex-archive/info/lshort/english}
+	}
+	\bibitem{einstein} 
+	\textenglish{
+	Jean Pierre Casteleyn. Visual TikZ (version 0.62). IUT Génie Thermique et
+Énergie, 2016
+	}
+	\bibitem{einstein} 
+	\textenglish{
+	Leslie Lamport. \LaTeX: A Document Preparation System, 2nd edition.
+Addison-Wesley Reading Mass, 1994.
+	}
+	\bibitem{einstein} 
+	\textenglish{
+	Till Tantau. TikZ PGF Manual, 2010. \url{http://www.ctan.org/
+tex-archive/graphics/pgf/.}
+	}
+	\bibitem{einstein} 
+	\textenglish{
+	URL \url{https://texample.net/}
+	}
+	\bibitem{einstein} 
+	\textenglish{
+	URL \url{https://www.latex-project.org}
+	}
+	\bibitem{einstein} 
+	\textenglish{
+	URL \url{https://python.org/}
+	}
+	\bibitem{einstein} 
+	\textenglish{
+	URL \url{https://www.latexstudio.net/}
+	}
+\end{english}
+\end{thebibliography}
+
+\end{document}

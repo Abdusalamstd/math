@@ -1,0 +1,181 @@
+%         listing options={style=tcblatex,numbers=left,
+%	numberstyle=\tiny\color{red!75!black}},
+%	before=\begin{center},after=\end{center}
+
+%%%%%%%%%% HTML %%%%%%%%
+\newtcblisting{html}{colback=yellow!5,colframe=yellow!50!black,listing only, fonttitle=\bfseries, listing engine=minted,minted language=html,minted options={breaklines,autogobble, escapeinside=``, fontsize=\small ,numbersep=2mm,baselinestretch=1}}
+
+%%%%%%%% Python
+\newtcblisting{numpython}{colback=yellow!10!white,colframe=red!75!black,listing only, fonttitle=\bfseries, listing engine=minted,minted language=python, minted options= {breaklines,autogobble,escapeinside=``,fontsize=\small, linenos, numbersep=3mm}}
+
+\newtcblisting{nonumpython}{colback=yellow!10!white,
+colframe=red!75!black,listing only,left=5mm, listing engine=minted,minted language=python, minted options={escapeinside=``,fontsize=\small,breaklines,autogobble}}
+
+%%%%%%%%%%%% Java
+\newtcblisting{myjava}{listing engine=minted,minted style=colorful,minted language=java,
+minted options={fontsize=\small,breaklines,autogobble,linenos,numbersep=3mm},
+colback=blue!5!white,colframe=blue!75!black,listing only,left=5mm,enhanced,
+overlay={\begin{tcbclipinterior}\fill[red!20!blue!20!white] (frame.south west)
+rectangle ([xshift=5mm]frame.north west);\end{tcbclipinterior}}}
+
+%%%%%%%%%%%%% C/C++ 
+
+\newenvironment{numcpp}{\VerbatimEnvironment\begin{minted}[mathescape,linenos,numbersep=5pt,gobble=2,frame=lines,framesep=2mm]{cpp}}{\end{minted}}
+
+\newenvironment{nonumcpp}{\VerbatimEnvironment\begin{minted}[mathescape,gobble=2,frame=lines,framesep=2mm]{cpp}}{\end{minted}}
+
+\newtcblisting{TCBnonumcpp}{listing only,listing engine=minted,minted language=cpp, minted options={escapeinside=``,breaklines,autogobble}}
+
+\newtcblisting{TCBnumcpp}{listing only,listing engine=minted,minted language=cpp, minted options={mathescape, linenos,numbersep=5pt,gobble=2, frame=lines, framesep=2mm,escapeinside=``,breaklines,autogobble}}
+%%%%%%%%%%% CSharp
+
+%%%%%%%%%%%%%%%%%% Command Shell %%%%%%%%%%%%%
+% For MaC
+\newtcblisting{macos}{size=small,halign title=flush left,title={\textcolor{red!62}{\huge\ttfamily\bfseries{$\bullet\,$}\textcolor{orange!52!yellow}{\huge\ttfamily\bfseries{$\bullet\,$}\textcolor{green!80!black}{\huge\ttfamily\bfseries{$\bullet\,$}}}}}, 
+colback=white,colupper=black,colframe=gray!25,listing only,
+listing options={style=tcblatex,language=sh,escapeinside=``},
+every listing line={
+\textcolor{magenta}{\small\ttfamily\bfseries{root@localhost{\textcolor{black}:\$ }}}
+}}
+
+%For Windows
+\newtcblisting{windows}{size=small,halign title=flush left,
+title={\textcolor{white}{Windows cmd.exe}},
+colback=black,colupper=white,colframe=blue,listing only,
+listing options={style=tcblatex,language=sh,escapeinside=``},
+every listing line={
+\textcolor{white}{\small\ttfamily\bfseries{C:admin>}}
+}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% For Ubuntu
+\newtcblisting{ubuntuos}{size=small,halign title=flush left,title={\textcolor{red!62}{\huge\ttfamily\bfseries{$\bullet\,$}\textcolor{orange!52!yellow}{\huge\ttfamily\bfseries{$\bullet\,$}\textcolor{green!80!black}{\huge\ttfamily\bfseries{$\bullet\,$}}}}}, 
+colback=violet!90!black,colupper=white,colframe=gray!65!black,listing only,
+listing options={style=tcblatex,language=sh,escapeinside=``,},
+every listing line={
+\textcolor{green}{\small\ttfamily\bfseries{root@localhost{\textcolor{white}:\$ }}}
+}}
+
+%%%%%%%%%%%%%%% Python shell %%%%%%%%%%%%%%
+\definecolor{bronze}{rgb}{0.8, 0.5, 0.2}
+\definecolor{azure}{rgb}{0.0, 0.44, 1.0}
+\newtcblisting{pythonshell}{size=small,halign title=flush left,
+title={\textcolor{white}{Python Shell}},
+colback=white,colupper=black,colframe=azure,listing only,
+listing options={style=tcblatex,language=sh,escapeinside=``},
+every listing line={
+\textcolor{bronze}{\small\ttfamily\bfseries{>>> }}
+}}
+
+\newtcblisting{mypythonshell}{size=small,halign title=flush left,
+title={\textcolor{white}{Python Shell}},
+colback=white,colupper=black,colframe=azure,listing only,
+listing options={style=tcblatex,language=sh,escapeinside=``}}
+
+%%%%%%%%%%%%%%% Jupyter IPython %%%%%%%%%% 
+\newlength\jupyterinwd
+\setlength\jupyterinwd{1.3cm}
+
+\newcounter{ipythcntr}
+\renewcommand{\theipythcntr}{\texttt{[\arabic{ipythcntr}]}}
+
+\newtcblisting{jupyterin}[1][]{%
+  sharp corners,
+  enlarge left by=\jupyterinwd,
+  width=\linewidth-\jupyterinwd,
+  enhanced,
+  boxrule=0pt,
+  colback=jupyterlight_gray,
+  listing only,
+  top=0pt,
+  bottom=0pt,
+  overlay={
+    \node[
+      anchor=north east,
+      text width=\jupyterinwd,
+      font=\footnotesize\ttfamily\color{jupyterkey},
+      inner ysep=2mm,
+      inner xsep=0pt,
+      outer sep=0pt
+      ] 
+      at (frame.north west)
+      {\refstepcounter{ipythcntr}\label{#1}In \theipythcntr:};
+  }
+  listing engine=listing,
+  listing options={
+    aboveskip=1pt,
+    belowskip=1pt,
+    basicstyle=\footnotesize\ttfamily,
+    language=Python,
+    keywordstyle=\color{jupygreen},
+    commentstyle=\color{codecomment},
+    showstringspaces=false,
+    stringstyle=\color{jupytergreen}
+  },
+}
+\newtcblisting{pyprint}{
+  sharp corners,
+  enlarge left by=\jupyterinwd,
+  width=\linewidth-\jupyterinwd,
+  enhanced,
+  boxrule=0pt,
+  colback=white,
+  listing only,
+  top=0pt,
+  bottom=0pt,
+  overlay={
+    \node[
+      anchor=north east,
+      text width=\jupyterinwd,
+      font=\footnotesize\ttfamily\color{jupyterkey},
+      inner ysep=2mm,
+      inner xsep=0pt,
+      outer sep=0pt
+      ] 
+      at (frame.north west)
+      {};
+  }
+  listing engine=listing,
+  listing options={
+      aboveskip=1pt,
+      belowskip=1pt,
+      basicstyle=\footnotesize\ttfamily,
+      language=Python,
+      keywordstyle=\color{jupyterkey},
+      showstringspaces=false,
+      stringstyle=\color{jupytergreen}
+    },
+}
+\newtcblisting{jupyterout}[1][\theipythcntr]{
+  sharp corners,
+  enlarge left by=\jupyterinwd,
+  width=\linewidth-\jupyterinwd,
+  enhanced,
+  boxrule=0pt,
+  colback=white,
+  listing only,
+  top=0pt,
+  bottom=0pt,
+  overlay={
+    \node[
+      anchor=north east,
+      text width=\jupyterinwd,
+      font=\footnotesize\ttfamily\color{alizarin},
+      inner ysep=2mm,
+      inner xsep=0pt,
+      outer sep=0pt
+      ] 
+      at (frame.north west)
+      {\setcounter{ipythcntr}{\value{ipythcntr}}Out#1:};
+  }
+  listing engine=listing,
+  listing options={
+      aboveskip=1pt,
+      belowskip=1pt,
+      basicstyle=\footnotesize\ttfamily,
+      language=Python,
+      keywordstyle=\color{jupyterkey},
+      showstringspaces=false,
+      stringstyle=\color{jupytergreen}
+    },
+}
+

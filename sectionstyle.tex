@@ -1,0 +1,104 @@
+% Décalages numéro de sections / titres des sections
+\newlength\decalnumsec
+\newlength\decalnumsubsec
+\newlength\decalnumsubsubsec
+\setlength{\decalnumsec}{-0.5em}
+\setlength{\decalnumsubsec}{-0.5em}
+\setlength{\decalnumsubsubsec}{-0.5em}
+% Espace entre le numéro de section et le titre
+\newlength\spacetitlesec
+\newlength\spacetitlesubsec
+\newlength\spacetitlesubsubsec
+\setlength{\spacetitlesec}{0.5em}
+\setlength{\spacetitlesubsec}{0.2em}
+\setlength{\spacetitlesubsubsec}{0.2em}
+% Décalage horizontal des titres
+\newlength\decalxtitlesubsec
+\newlength\decalxtitlesubsubsec
+\setlength{\decalxtitlesubsec}{0pt}
+\setlength{\decalxtitlesubsubsec}{0pt}
+
+
+%%%%Chapter Style %%%%%%%%%%%%%
+\definecolor{terracotta}{rgb}{0.89, 0.45, 0.36}
+\newcommand\mychapter[1]{
+\begin{tcolorbox}[enhanced,spread upwards,sharp corners=north,
+colframe=blue,interior style={top color=white,bottom color=terracotta!80}]
+\chapter{#1}
+\end{tcolorbox}
+}
+
+%%%%%%%% Section Style %%%%%%%%%\Roman{section}
+%\renewcommand{\thesection}{\arabic{section}}
+\titleformat{\section}[block]
+{%
+	\LARGE\bf
+	\color{section@title@color}
+}
+{
+\raisebox{\decalnumsec}
+{%
+\begin{tikzpicture}
+\node (numsec) {\bf\thesection};
+\fill[rounded corners=2pt,fill=shadow@color] ($(numsec.north west)+(2pt,-2pt)$) -- ($(numsec.north east)+(1mm,0mm)+(2pt,-2pt)$) -- ($(numsec.south east)+(2pt,-2pt)$) -- ($(numsec.south west)+(-1mm,0)+(2pt,-2pt)$) -- cycle;
+\fill[rounded corners=2pt,fill=section@title@color] (numsec.north west) -- ($(numsec.north east)+(1mm,0mm)$) -- (numsec.south east) -- ($(numsec.south west)+(-1mm,0)$) -- cycle;
+\node[white] at (numsec) {\bf\thesection};
+\end{tikzpicture}
+}
+}
+{\spacetitlesec}
+{\RL{#1}}
+
+%%%%%%%%%%%%% Titre de subsection
+\def\subsectiontitle@font{\fontfamily{ugq}\selectfont}
+\def\subsubsectiontitle@font{\fontfamily{ugq}\selectfont}
+
+%\renewcommand{\thesubsection}{\arabic{subsection}}
+\titleformat{\subsection}[block]
+{%
+	\hspace*{\decalxtitlesubsec}
+	\bf\Large
+	\color{subsection@title@color}
+}
+{
+	\raisebox{\decalnumsubsec}
+	{%
+	\begin{tikzpicture}[xshift=4cm]
+	\node (numsec) {\subsectiontitle@font\thesubsection};
+	\fill[rounded corners=2pt,fill=shadow@color] ($(numsec.north west)+(2pt,-2pt)$) -- ($(numsec.north east)+(1mm,0mm)+(2pt,-2pt)$) -- ($(numsec.south east)+(2pt,-2pt)$) -- ($(numsec.south west)+(-1mm,0)+(2pt,-2pt)$) -- cycle;
+	\fill[rounded corners=2pt,fill=subsection@title@color] (numsec.north west) -- ($(numsec.north east)+(1mm,0mm)$) -- (numsec.south east) -- ($(numsec.south west)+(-1mm,0)$) -- cycle;
+    \node[white] at (numsec) {\subsectiontitle@font\bf\thesubsection};
+    \node [subsection@title@color] at ($(numsec)-(6cm,0)$) {\parbox{.6\textwidth}{\RL{\bf \qquad#1\hfill}}};
+	\end{tikzpicture}
+	}
+}
+{%
+	\spacetitlesubsec
+}
+{%
+	%\itemclass{subsection@title@color}{\subsubsection@font}
+	%\RL{#1}
+}
+
+%%%%%%%%%%%%% Titre des subparagraph
+\titleformat{\subsubsection}[runin]
+{%
+	\it
+	\color{subparagraph@title@color}
+}
+{}{1em}{\hspace{1cm}\it\large\RL{#1}}
+
+%%%%%%%%%%%%% Titre des paragraph
+\titleformat{\paragraph}[runin]
+{%
+	\bf
+	\color{paragraph@title@color}
+}
+{}{1em}{\hspace{1.2cm}\bf\RL{#1}}
+%%%%%%%%%%%%% Titre des subparagraph
+\titleformat{\subparagraph}[runin]
+{%
+	\it
+	\color{subparagraph@title@color}
+}
+{}{1em}{\hspace{1.5cm}\it\large\RL{#1}}
