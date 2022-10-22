@@ -75,3 +75,4 @@
 
 :warning: Proibited Commersial Use​
 
+# math

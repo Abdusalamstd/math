@@ -72,7 +72,7 @@ $
 ئەگەر قاتارنىڭ قىسمەن يىغىندىسى $S_n$ نىڭ لىمىتى مەۋجۇت بولمسا، ئۇنداقتا بۇ قاتار \textbf{يىراقلىشىشىدۇ} دەپ ئاتىلىدۇ.\\
 قاتارنىڭ يىغىلىش ۋە يىراقلىىشىنىڭ يۈزەكى مەنىسى بولسا، يىغىلغاندا ئۇنىڭ يىغىندىسىنىڭ چېكى بار، يىراقلاشقاندا ئۇنىڭ يىغىندىسىنىڭ چېكى يوق.
 \subsubsection{خۇسۇسىيىتى}
-قاتارنىڭ ئېنىقلىمىسى ۋە يىغىلىشچانلىقىغا ئاساسەن تۆۋەندىكى بىرقانچە خۇسۇسىيەتلەرگە ئېرشەلەيمىز.
+قاتارنىڭ ئېنىقلىمىسى ۋە يىغىلىشچانلىقىغا ئاساسەن تۆۋەندىكى بىرقانچە خۇسۇسىيەتلەرگە ئېرىشەلەيمىز.
 \begin{WhiteRule}{قاتار يىغىلىشىنىڭ زۆرۈر شەرتى}{}%
 ئەگەر قاتار 
 $\sum\limits_{n=1}^\infty u_n=u_1+u_2+\cdots+u_n+\cdots$
@@ -268,7 +268,7 @@ $\sum\limits_{n=1}^\infty (1-1)+(1-1)+...+(1-1)+.... = 0+0+..0+..=0$\\
 \begin{colorful}[red]
 ناۋادا قاتار
 $\sum\limits_{n=1}^\infty u_n=u_1+u_2+\cdots+u_n+\cdots$
-يىغىلىدىغان قاتار ئۇنداقتا\\
+يىغىلىدىغان قاتار ئۇنداقتا:\\
 ئەگەر ئۇنىڭ مۇتلەق قىممەت قاتارى
 $\sum\limits_{n=1}^\infty |u_n|$
 مۇ يىغىلسا، بۇ قاتارنى
@@ -539,17 +539,19 @@ $x_0 = 0$
 ئېلمىنتار فۇنكىسىيەلەرنىڭ كۆپىنچىسى چەكسىز ھاسىلىسى بار بولۇپ، ئۇلارنى 0 نۇقتىدا دەرىجىلىك قاتارغا يايغاندا، بىرتۈركۈم گۈزەل نەتىجىلەرگە ئېرىشەلەيمىز، ئاساسلىقى تۆۋەندىكىچە:
 \begin{english}
 \begin{enumerate}
-	\item $e^x=\sum\limits_{n=0}^\infty\dfrac{x^n}{n!}=1+x+\dfrac{x^2}{2!}+\dfrac{x^n}{n!}+\cdots$，$-\infty<x<+\infty$.
-	\item $\dfrac{1}{1+x}=\sum\limits_{n=0}^\infty(-1)^nx^n=1-x+x^2-x^3+\cdots+(-1)^nx^n+\cdots$，$-1<x<1$.
-	\item $\dfrac{1}{1-x}=\sum\limits_{n=0}^\infty x^n=1+x+x^2+\cdots+x^n+\cdots$,$-1<x<1$.
-	\item $\ln(1+x)=\sum\limits_{n=0}^\infty(-1)^{n-1}\dfrac{x^n}{n}=x-\dfrac{x^2}{2}+\dfrac{x^3}{3}+\cdots+(-1)^{n-1}\dfrac{x^n}{n}+\cdots$,$-1<x\leqslant1$.
-	\item $\sin x=\sum\limits_{n=0}^\infty(-1)^n\dfrac{x^{2x+1}}{(2n+1)!}=x-\dfrac{x^3}{3!}+\dfrac{x^5}{5!}+(-1)^n\dfrac{x^{2n+1}}{(2n+1)!}+\cdots$，$-\infty<x<+\infty$.
-	\item $\cos x=\sum\limits_{n=0}^\infty(-1)^n\dfrac{x^{2n}}{(2n)!}=1-\dfrac{x^2}{2!}+\dfrac{x^4}{4!}+(-1)^n\dfrac{x^{2n}}{(2n)!}+\cdots$,$-\infty<x<+\infty$.
-	\item $(1+x)^\alpha=1+\alpha x+\dfrac{\alpha(\alpha-1)}{2!}x^2+\cdots+\dfrac{a(a-1)\cdots(a-n+1)}{n!}x^n+\cdots$，$\left\{\begin{array}{l}
+	\item $e^x =1+x+\dfrac{x^2}{2!}+\cdots+\dfrac{x^n}{n!}+\cdots$,$-\infty<x<+\infty$.
+	\item $\dfrac{1}{1+x} =1-x+x^2-x^3+\cdots+(-1)^nx^n+\cdots$,$-1<x<1$.
+	\item $\dfrac{1}{1-x} =\sum\limits_{n=0}^\infty x^n=1+x+x^2+\cdots+x^n+\cdots$,$-1<x<1$.
+	\item $\ln(1+x)=x-\dfrac{x^2}{2}+\dfrac{x^3}{3}+\cdots+(-1)^{n-1}\dfrac{x^n}{n}+\cdots$,$-1<x\leqslant1$.
+	\item $(1+x)^\alpha=1+\alpha x+\dfrac{\alpha(\alpha-1)}{2!}x^2+\cdots+ \dfrac{a(a-1)\cdots(a-n+1)}{n!}x^n+\cdots$
+	$$\left\{\begin{array}{l}
 		x\in(-1,1),\text{ئەگەر}\alpha\leqslant-1 \\
 		x\in(-1,1],\text{ئەگەر}-1<\alpha<0 \\
 		x\in[-1,1],\text{ئەگەر}\alpha>0
-	\end{array}\right.$.
+	\end{array}\right.$$.
+
+	\item $\sin x=x-\dfrac{x^3}{3!}+\cdots+(-1)^n\dfrac{x^{2n+1}}{(2n+1)!}+\cdots$, $-\infty<x<+\infty$.
+	\item $\cos x=1-\dfrac{x^2}{2!}+\cdots+(-1)^n\dfrac{x^{2n}}{(2n)!}+\cdots$, $-\infty<x<+\infty$.
 \end{enumerate}
 \end{english}
 
@@ -725,11 +727,15 @@ $f(x) = |x|, (-\pi \le x \le \pi)$
 
 فورمۇلا $1.1-1.3$ لارنى ئەيلېر فورمۇلىسى بىلەن بىرىكتۈرسەك:
 
- \begin{align*}
-f(x) &= \frac{a_0}{2}+\sum_{n=1}^{\infty}(a_n\cos \frac{n \pi x}{l} + b_n\sin \frac{n \pi x}{l}) = \frac{a_0}{2}+\sum_{n=1}^{\infty} \left[ \frac{a_n}{2} \left (e^{i\frac{n \pi x}{l}}+e^{-i\frac{n \pi x}{l}} \right)-\frac{ib_n}{2} \left (e^{i\frac{n \pi x}{l}}-e^{-i\frac{n \pi x}{l}} \right) \right] \\
-&= \frac{a_0}{2}+\sum_{n=1}^{\infty} \left[ \frac{a_n-ib_n}{2}e^{i\frac{n \pi x}{l}}+\frac{a_n+ib_n}{2}e^{-i\frac{n \pi x}{l}}\right] 
-= \frac{a_0}{2}+\sum_{n=1}^{\infty} \left[ \frac{a_n-ib_n}{2}e^{i\frac{n \pi x}{l}}+\frac{a_n+ib_n}{2}e^{-i\frac{n \pi x}{l}}\right] \\
-&= C_0 +\sum_{n=1}^{\infty} \left[ C_ne^{i\frac{n \pi x}{l}}+C_{-n}e^{-i\frac{n \pi x}{l}}\right] = \sum_{n=-\infty}^{+\infty}C_n e^{i \frac{n \pi x}{l}},\quad C_0 = \frac{a_0}{2} , C_n=\frac{a_n-ib_n}{2},C_{-n}=\frac{a_n+ib_n}{2}
+\begin{align*}
+f(x) 
+&= \frac{a_0}{2}+\sum_{n=1}^{\infty}(a_n\cos \frac{n \pi x}{l} + b_n\sin \frac{n \pi x}{l})\\ 
+&= \frac{a_0}{2}+\sum_{n=1}^{\infty} \left[ \frac{a_n}{2} \left (e^{i\frac{n \pi x}{l}}+e^{-i\frac{n \pi x}{l}} \right)-\frac{ib_n}{2} \left (e^{i\frac{n \pi x}{l}}-e^{-i\frac{n \pi x}{l}} \right) \right] \\
+&= \frac{a_0}{2}+\sum_{n=1}^{\infty} \left[ \frac{a_n-ib_n}{2}e^{i\frac{n \pi x}{l}}+\frac{a_n+ib_n}{2}e^{-i\frac{n \pi x}{l}}\right] \\
+&= \frac{a_0}{2}+\sum_{n=1}^{\infty} \left[ \frac{a_n-ib_n}{2}e^{i\frac{n \pi x}{l}}+\frac{a_n+ib_n}{2}e^{-i\frac{n \pi x}{l}}\right] \\
+&= C_0 +\sum_{n=1}^{\infty} \left[ C_ne^{i\frac{n \pi x}{l}}+C_{-n}e^{-i\frac{n \pi x}{l}}\right] \\
+&=\sum_{n=-\infty}^{+\infty}C_n e^{i \frac{n \pi x}{l}}.\\
+&\quad C_0= \frac{a_0}{2} , C_n=\frac{a_n-ib_n}{2},C_{-n}=\frac{a_n+ib_n}{2}
 \end{align*}
 دىمەك 
 $$
@@ -765,7 +771,7 @@ f_T(x) &=\frac{1}{T}\sum_{n=-\infty}^{+\infty} \left (\int_{-\frac{T}{2}}^{\frac
  $$
  f(x) = \lim_{T \to + \infty}f_T(x) = \lim_{T \to +\infty} \frac{1}{T}\sum_{n=-\infty}^{+\infty} \left (\int_{-\frac{T}{2}}^{\frac{T}{2}} f_T(x)e^{-in \omega x}dx \right)e^{in \omega x}
  $$
- يۇقىرىدىكى لىمىت نەزىريەسى ئاساسىدا بۇ ئىپادىگە قارىتا ئاددىيلاشتۇرۇش ئېلىپ بارىمىز. دەۋرىيسى چەكسىزلىككە قاراپ ماڭدى، دىمەك بۇلۇڭلۇق تىزلىكى نۆلگە قاراپ ماڭدى دېگەنلىك.
+ لىمىت نەزىريەسى ئاساسىدا بۇ ئىپادىگە قارىتا ئاددىيلاشتۇرۇش ئېلىپ بارىمىز. دەۋرىيسى چەكسىزلىككە قاراپ ماڭدى، دىمەك بۇلۇڭلۇق تىزلىكى نۆلگە قاراپ ماڭدى دېگەنلىك.
 \begin{align*}
  f(x) &= \lim_{T \to +\infty} \frac{1}{T}\sum_{n=-\infty}^{+\infty} \left (\int_{-\frac{T}{2}}^{\frac{T}{2}} f_T(x)e^{-in \omega x}dx \right)e^{in \omega x} \\
  &= \lim_{\Delta \omega \to 0}\frac{1}{2 \pi} \sum_{n=-\infty}^{+\infty} 
@@ -792,14 +798,12 @@ e^{i \omega x}d\omega
 ئەگەر فۇنكىسىيە $f(x)$ ئىنتېرۋال $[-\infty,+\infty]$ مۇتلەق ئىنتېگىراللىغىلى بولسا، يۇقىرىدىكى $F(\omega)$ نى بىز فۇنكىسىيە $f(x)$ نىڭ 
 \textcolor{red}{فۇريې ئالماشتۇرىشى}
 دەيمىز. ھەم تۆۋەندىكىدەك خاتېرلەيمىز:
-
-\begin{align*}
-F(\omega) &= F[f(x)] \\
-F[f(x)] &= \int_{-\infty}^{+\infty} f(x)e^{-i\omega x}dx
-\end{align*}
+\begin{center}
+	\tcboxmath[colback=lightblue!25!white,colframe=blue]{F(\omega) = F[f(x)] = \int_{-\infty}^{+\infty} f(x)e^{-i\omega x}dx}
+\end{center}
 
 مانا بۇ فۇريې ئالماشتۇرىشى.\\
-ئالماشتۇرۇشتى كىيىنكى فۇنكىسىيەنى ئەسلىي فۇنكىسىيە بىلەن بىرلەشتۈرۈپ فۇريې تەتۈر ئالماشتۇرىشى دەپ ئاتايمىز.  ھەم تۆۋەندىكىدەك خاتىرلەيمىز:
+ئالماشتۇرۇشتىن كىيىنكى فۇنكىسىيەنى ئەسلىي فۇنكىسىيە بىلەن بىرلەشتۈرۈپ كېلىپ چىققان ئالماشتۇرۇشنى فۇريې تەتۈر ئالماشتۇرىشى دەپ ئاتايمىز.  ھەم تۆۋەندىكىدەك خاتىرلەيمىز:
 
 \begin{align*}
 f(x) &= F^{-1}[F(\omega)] \\
@@ -830,14 +834,14 @@ $$e^{ki \frac{2 \pi}{D} n}$$
 
 ئۈزلۈكسىز: ئەسلىدىكى سىگنال $f(x)$ 
 \begin{align*}
-C_k = \frac{1}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}} f(t)e^{-ki \omega t}dt , k=0, \pm 1, \pm 2 , \pm 3, ... \\
-f(t) = \sum_{k=-\infty}^{+\infty}C_k e^{ki \omega t}
+C_k &= \frac{1}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}} f(t)e^{-ki \omega t}dt , k=0, \pm 1, \pm 2 , \pm 3, ... \\
+f(t) &= \sum_{k=-\infty}^{+\infty}C_k e^{ki \omega t}
 \end{align*}
 دىسكرېت: ئەسلىي سىگنال $x[n]$ 
 \begin{align*}
-X_k = \sum_{n=0}^{D-1}x[n] e^{-ki \frac{2 \pi}{D} n}
+X_k &= \sum_{n=0}^{D-1}x[n] e^{-ki \frac{2 \pi}{D} n}
 \\
-x[n] = \frac{1}{D}\sum_{k=0}^{D-1}X_k e^{ki \frac{2 \pi}{D} n}
+x[n] &= \frac{1}{D}\sum_{k=0}^{D-1}X_k e^{ki \frac{2 \pi}{D} n}
 \end{align*}
 بۇ يەكۈنگە ئەيلېر فورمۇلاسىنى بىرلەشتۈرۈپ 
 $w = e^{2 \pi i/D} = \cos \frac{2 \pi}{D} -i \sin \frac{2 \pi}{D}$ 
