@@ -4,7 +4,7 @@
 
 **This is My Personal Repository, Record My Math Note-Book** :books:
 
-####  :books: Advanced Math and Liniear Algebra
+####  :books: Advanced Math and Linear Algebra
 
 :golf: ​File Tree:
 
