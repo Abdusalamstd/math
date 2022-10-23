@@ -239,15 +239,15 @@ $$\dfrac{\textrm{d}z}{\textrm{d}x}=(1-n)P(x)z=(1-n)Q(x)$$
 	$$\dfrac{\textrm{d}x}{\textrm{d}y}=\dfrac{(1+x\ln y)x}{y}=\dfrac{1}{y}x+\dfrac{\ln y}{y}x^2$$
 	بېرنوئىل تەڭلىمىسىىدە:
 	\begin{align*}
-		x'+P(x)x=Q(x)x^n : x'-\dfrac{1}{y}x=\dfrac{\ln y}{y}x^2\\
-		P(x)=-\dfrac{1}{y}, Q(x)=\dfrac{\ln y}{y}
+		x'+P(x)x&=Q(x)x^n, x'-\dfrac{1}{y}x=\dfrac{\ln y}{y}x^2\\
+		P(x)&=-\dfrac{1}{y}, Q(x)=\dfrac{\ln y}{y}
 	\end{align*}
 تەڭلىكنىڭ ئىككى تەرىپىنى
 	$x^{-2}$
 	گە كۆپەيتسەك:
-	$$x^{-2}x'-\dfrac{1}{y}x^{-1}=\dfrac{\ln y}{y}$$ $$z=x^{-1}, \dfrac{\textrm{d}z}{\textrm{d}y}=-\dfrac{1}{x^2}\dfrac{\textrm{d}x}{\textrm{d}y}$$
+	$$x^{-2}x'-\dfrac{1}{y}x^{-1}=\dfrac{\ln y}{y}, \quad z=x^{-1}, \dfrac{\textrm{d}z}{\textrm{d}y}=-\dfrac{1}{x^2}\dfrac{\textrm{d}x}{\textrm{d}y}$$
 	ئەسلى تەڭلىمىگە باغلىساق:
-	$$-\dfrac{\textrm{d}z}{\textrm{d}y}-\dfrac{1}{y}z=\dfrac{\ln y}{y}$$،$$\dfrac{\textrm{d}z}{\textrm{d}y}+\dfrac{1}{y}z=-\dfrac{\ln y}{y}$$
+	$$-\dfrac{\textrm{d}z}{\textrm{d}y}-\dfrac{1}{y}z=\dfrac{\ln y}{y}, \quad \dfrac{\textrm{d}z}{\textrm{d}y}+\dfrac{1}{y}z=-\dfrac{\ln y}{y}$$
 	فورمۇلا ئارقىلىق:
 	\begin{align*}
 	z &= e^{-\int\frac{1}{y}\textrm{d}y}\left(\displaystyle{\int e^{\int\frac{1}{y}\textrm{d}y}\cdot\left(\dfrac{\ln y}{y}\right)+C}\right)\\
@@ -260,15 +260,105 @@ $$\dfrac{\textrm{d}z}{\textrm{d}x}=(1-n)P(x)z=(1-n)Q(x)$$
 
 \subsection{تۆۋەنلەتكىلى بولىدىغان دېففېرېنسىئال تەڭلىمە}
  ئادەتتە بەزى يۇقىرى دەرىجىلىك تەڭلىمىلەرنى تۆۋەن دەرىجىلىك تەڭلىمىلەرنى چۈشۈرۈپ يېشىشكە بولىدۇ ،  بىز بۇنداق دەرىجىسىنى تۆۋەنلەتكىلى بولىدىغان تەڭلىمىلەرنى تۆۋەنلەتكىلى بولىدىغان دېففېرېنسىئال تەڭلىمە دەيمىز.
+\begin{itemize}
+\item[\faIcon{hand-point-left}] $y^{(n)}=f(x)$\\
+تەڭلىمىنىڭ ئوڭ تەرىپىدە پەقەت $x$ لا بار بولغان فۇنكىسىيە.\\
+بۇ خىلدىكى تەڭلىمىدە، ئارقىمۇ-ئارا ھاسىلىسىنى ھىساپلىغاندا $n$ دانە تۇراقلىق مىقدارنى ئۆز ئىچىگە ئالغان ئورتاق يېشىمىگە ئېرىشەلەيمىز. تۆۋەندىكى مىسالدا بېرىلگەندەك:
+\begin{myexample}
+	تەڭلىمە $y'''=e^{2x}-\cos x$ نى يېشىڭ.
+	\\\rule{\linewidth}{0.05em}
+	\begin{align*}
+	y''&=\dfrac{1}{2}e^{2x}-\sin x+C_1, y'=\dfrac{1}{4}e^{2x}+\cos x+C_1x+C_2\\
+	y&=\dfrac{1}{8}e^{2x}+\sin x+\dfrac{1}{2}C_1x^2+C_2x+C_3
+	\end{align*}
+\end{myexample}
+
+\item[\faIcon{hand-point-left}] $y''=f(x,y')$\\
+بۇ خىلدىكى تەڭلىمىدە $y'',y',x$ لەر بار، ئەمما $y$ يوق. بۇنداق تەڭلىمىلەردە $y'=p$ قىلىپ خاتېرلىۋالساق، $y''=p'$ بولىدۇ، بۇنى ئەسلى تەڭلىمىگە باغلىساق، $p$ غا مۇناسىۋەتلىك بىرىنجى دەرىجىلىك تەڭلىمىگە ئېرىشەلەيمىز.
 
 \begin{myexample}
-	تەڭلىمە
-	نى يېشىڭ.
-	\\\rule{\linewidth}{0.05em}\\
-	
+	تەڭلىمە $(1+x^2)y''=2xy'$، دەسلەپكى شەرتى 
+	$y\vert_{x=0}=1,y'\vert_{x=0}=3$
+	\\\rule{\linewidth}{0.05em}
+\begin{align*}
+	y'&=p, y''=p', (1+x^2)p'=2xp\\
+	\dfrac{\textrm{d}p}{p}&=\dfrac{2x}{1+x^2}\textrm{d}x\\
+	\ln p&=\ln(1+x^2)+C', p=C(1+x^2)\\
+	y'&=3(1+x^2), y=x^3+3x+1
+\end{align*}
+
 \end{myexample}
+
+\item[\faIcon{hand-point-left}] $y''=f(y,y')$\\
+بۇ خىلدىكى تەڭلىمىدە $y'',y',y$ لەر بار، ئەمما $x$ يوق.\\
+بۇ خىلدىكى تەڭلىمىلەردە، ئالدىنقىسىغا ئوخشاش $y'=p$ قىلىپ خاتېرلىۋالساق، 
+$$y''=p'=\dfrac{\textrm{d}p}{\textrm{d}x}=\dfrac{\textrm{d}p}{\textrm{d}y}\cdot\dfrac{\textrm{d}y}{\textrm{d}x}=p\dfrac{\textrm{d}p}{\textrm{d}y}=f(y,p)$$
+بۇنى ئاجراتقىلى بولىدىغان تەڭلىمە بويىچە يېشىشكە بولىدۇ.
+
+\end{itemize}
+
+
 \section{يۇقرى دەرىجىلىك سىزىقلىق دىففېرېنسىئال تەڭلىمە}
 \subsection{يۇقرى دەرىجىلىك تەڭلىمە}
+بىرىنجى پاراگىرافتا ئادەتتىكى دېففېرىنسىئال تەڭلىمە خاتېرلەندى.\\
+ئىككىنچى پاراگىرافتا تۆۋەنلەتكىلى بولىدىغان تەڭلىمىلەر خاتېرلەندى.\\
+بۇ بۆلەكتە شەكلى
+$y^{(n)}+a_1(x)y^{(n-1)}+\cdots+a_{n-1}(x)y'+a_n(x)y=0$
+ۋە
+$y^{(n)}+a_1(x)y^{(n-1)}+\cdots+a_{n-1}(x)y'+a_n(x)y=f(x)$
+بولغان $n$ دەرجىلىك تەڭلىمە تونۇشتۇرىلىدۇ.
+
 \subsection{ئەيلېر تەڭلىمىسى}
+
+\begin{MyDefinition}{ئەيلېر تەڭلىمىسى}{}
+شەكلى
+$$x^2\dfrac{\textrm{d}^2y}{\textrm{d}x^2}+px\dfrac{\textrm{d}y}{\textrm{d}x}+qy=f(x)$$
+بولغان تەڭلىمە ئەيلېر تەڭلىمىسى دەپ ئاتىلىدۇ.
+\end{MyDefinition}
+تەڭلىمىدە $p,q$ لار ئېنىق بولغان تۇراقلىق سان، $f(x)$ ئېنىق بولغان فۇنكىسىيە.
+ئەيلېر تەڭلىمىسىنى يېشىشتە تۆۋەندىكىدەك ئىككى باسقۇچقا بۆلۈشكە بولىدۇ.\\
+ئەگەر$x>0$ بولسا:\\
+$x=e^t$
+دەپ خاتېرلىۋالساق،
+$t=\ln x$
+بولىدۇ.
+\begin{align*}
+\dfrac{\textrm{d}t}{\textrm{d}x}
+&=\dfrac{1}{x},\dfrac{\textrm{d}y}{\textrm{d}x}=\dfrac{\textrm{d}y}{\textrm{d}t}\dfrac{\textrm{d}t}{\textrm{d}x}=\dfrac{1}{x}\dfrac{\textrm{d}y}{\textrm{d}t}
+\\
+\dfrac{\textrm{d}^2y}{\textrm{d}x^2}
+&=\dfrac{\textrm{d}}{\textrm{d}x}\left(\dfrac{1}{x}\dfrac{\textrm{d}y}{\textrm{d}t}\right)
+=-\dfrac{1}{x^2}\dfrac{\textrm{d}y}{\textrm{d}t}+\dfrac{1}{x}\dfrac{\textrm{d}}{\textrm{d}x}\left(\dfrac{\textrm{d}y}{\textrm{d}t}\right)\\
+&=-\dfrac{1}{x^2}\dfrac{\textrm{d}y}{\textrm{d}t}+\dfrac{1}{x^2}\dfrac{\textrm{d}^2y}{\textrm{d}t^2}
+\end{align*}
+تەڭلىمە
+$\dfrac{\textrm{d}^2y}{\textrm{d}t^2}+(p-1)\dfrac{\textrm{d}y}{\textrm{d}t}+qy=f(e^t)$
+گە ئايلىنىدۇ، ئاخىردا
+$t=\ln x$
+بىلەن قايتۇرساق تەڭلىمە يېشىمىگە ئېرىشەلەيمىز.\\
+
+ئەگەر 
+$x<0$
+بولسا،
+$x=-e^t$
+قىلىپ خاتېرلىۋالساق، ئۈستىدىكى ئۇسۇل بىلەن يېشىمىگە ئېرىشەلەيمىز.
+\begin{myexample}
+	تەڭلىمە
+	$x^2\dfrac{\textrm{d}^2y}{\textrm{d}x^2}+4x\dfrac{\textrm{d}y}{\textrm{d}x}+2y=0, \quad x>0$
+	نى يېشىڭ.
+	\\\rule{\linewidth}{0.05em}\\
+	بىۋاستە فورمۇلادىن پايدىلانساق،
+	$\dfrac{\textrm{d}^2y}{\textrm{d}t^2}+3\dfrac{\textrm{d}y}{\textrm{d}t}+2y=0$\\
+	شۇڭا
+	$y''+3y'+2y=0$ \\
+ خاراكتېرلىگۈچى تەڭلىمىسى:
+	$$\lambda^2+3\lambda+2=0, \lambda_1=-1, \lambda_2=-2$$
+	$$\therefore y=C_1e^{-x}+C_2e^{-2x}$$
+	ئاخېرىدا
+	$x=e^t $
+	بىلەن ئالماشتۇرساق:
+	$$y=\dfrac{C_1}{x}+\dfrac{C_2}{x^2}$$
+	
+\end{myexample}
 
 
