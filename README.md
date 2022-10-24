@@ -38,9 +38,9 @@
 > >
 > >  :watermelon: chapter1.tex: Pre-Pared Knowledge                              :arrow_right: :ok:
 > >
-> > :watermelon: chapter2.tex: Function and Limit                                   :arrow_right: :pencil2:
+> > :watermelon: chapter2.tex: Function and Limit                                   :arrow_right: :pencil:
 > >
-> > :watermelon: chapter3.tex: Differential Integeral                               :arrow_right: :no_entry:
+> > :watermelon: chapter3.tex: Differential Integeral                               :arrow_right: :pencil2:
 > >
 > > :watermelon: chapter4.tex: Definite & InDefinite Integration           :arrow_right: :no_entry:
 > >
@@ -99,9 +99,13 @@
 
 ### Note
 
-:warning: No commercial use without permission. Thank you!
+:warning: No commercial use. Thank you!
 
 # Release Note
 
-:notebook: 2022/10/22 Re-Initialize git
+:notebook: 2021/10/22 Initialize in local git
+
+~
+
+:books: 2022/10/22 Re-Initialize in Github
 
