@@ -29,41 +29,48 @@ $\lim\limits_{x\to x_0}{(f(x)-f(x_0))}$
 مۇ نۆلگە چەكسىز يېقىنلىشىدۇ، شۇڭا بۇلارنىڭ نىسبەتلىرى 0 بولۇپ كېتىشى ناتايىن.
 
 \begin{MyDefinition}{ھاسىلە}{}
-فۇنكىسىيە 
-$f(x)$
-ئېنتېرۋال
-$I$
-دا، ئۆزگەرگۈچى مىقدار 
-$x$
-گە بولغان ئارتقۇچى مىقدار
+فۇنكىسىيە $f(x)$ ئېنتېرۋال $I$ دا، ئۆزگەرگۈچى مىقدار $x$ گە بولغان ئارتقۇچى مىقدار
 $\Delta x$
 گە نىسبەتەن، ئېنتېرۋال $I$ دىكى خالىغان بىر نۇقتا 
 $x=x_0$ 
 ئۈچۈن،
 $x_0 \in I, x_0+\Delta x \in I$
-شەرتىنى قانائەتلەندۈرسە،
-فۇنكىسىيەنىڭ ئارتقۇچى مىقدارى 
+شەرتىنى قانائەتلەندۈرسە،فۇنكىسىيەنىڭ ئارتقۇچى مىقدارى 
 $\Delta y = f(x_0+\Delta x)-f(x_0)$
-بولىدۇ،
-ئەگەر ئارتقۇچى مىقدار 
+بولىدۇ،ئەگەر ئارتقۇچى مىقدار 
 $\Delta x \to 0$
 بولغاندا، ئۇنىڭ
 $\Delta y$
-گە بولغان نىسبىتى مەۋجۇت بولسا، بۇ نىسبەتنى بىز 
-$f(x)$
-نىڭ 
+گە بولغان نىسبىتى مەۋجۇت بولسا، بۇ نىسبەتنى بىز  $f(x)$ نىڭ 
 $x_0$
-نۇقتىدىكى
-\textbf{ھاسىلە}
-سى دەپ ئاتايمىز، ھەم ئۇنى
-$f'(x_0)$
-قىلىپ خاتىرلەيمىز. بۇنىڭدا
+نۇقتىدىكى \textbf{ھاسىلە}سى دەپ ئاتايمىز، ھەم ئۇنى $f'(x_0)$ قىلىپ خاتىرلەيمىز. بۇنىڭدا
 $$
 f'(x_0) = \lim\limits_{\Delta x \to 0}\frac{\Delta y}{\Delta x}
 = \lim\limits_{\Delta x \to 0}\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}
 $$
 
 \end{MyDefinition}
+تۆۋەندىكى جۈملىلەر تەڭداش:
+\begin{enumerate}
+	\item[\faIcon{hand-point-left}] $y=f(x)$ نۇقتا $x_0$ دا ھاسىلىسى بار
+	\item[\faIcon{hand-point-left}] $y=f(x)$ نۇقتا $x_0$ دا ھاسىلىسى مەۋجۇت
+	\item[\faIcon{hand-point-left}] $f'(x)=A$ ($A$ چەكلىك)
+\end{enumerate}
+
+\begin{indicate}
+	\begin{minipage}[b]{0.85\linewidth}
+يەككە ھاسىلىسى بولسا، ئوڭ ياكى سولدىكى ھاسىلىسىنى  كۆرسىتىدۇ، مەسىلەن:
+$$f'_+(x)=\lim\limits_{\Delta x\to 0^+}\dfrac{\Delta y}{\Delta x}=\lim\limits_{\Delta x\to 0}\dfrac{f(x_0+\Delta x)-f(x_0)}{\Delta x}$$
+$$f'_-(x)=\lim\limits_{\Delta x\to 0^-}\dfrac{\Delta y}{\Delta x}=\lim\limits_{\Delta x\to 0}\dfrac{f(x_0+\Delta x)-f(x_0)}{\Delta x}$$
+	
+	\end{minipage}
+	\hfil
+	\begin{minipage}[b]{0.1\linewidth}
+		\begin{tikzpicture}
+			\node[graduate,minimum size=1.5cm]{};
+		\end{tikzpicture}
+	\end{minipage}
+\end{indicate}
 
 \subsection{فۇنكىسىيە ھاسىلىسى}
 \subsection{يۇقرى دەرىجىلىك ھاسىلە}
