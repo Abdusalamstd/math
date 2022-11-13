@@ -1,24 +1,36 @@
 
 
-## This is personal math note-book :books:
+## Math note-book :books:
 
 * W: What it is?
 
   This is a math note. The notes cover advanced mathematics, linear algebra, and probability theory.
 
+  * Content: Math & Algibra & Statics
+
+  * Language: Ug
+
+  * Document: $\LaTeX$ 
+
+  * Volume: 3
+
+    > * Math: 8
+    > * Algibra: 8
+    > * Statistics: 6
+
 * H: How to use?
 
-  for dev: clone this repository, and compile it using $Xe\LaTeX$ 
-
-  for use: view main.pdf
+  > * for dev: clone this repository, and compile it using $Xe\LaTeX$ 
+>
+  > * for use: view main.pdf
 
 * H: What can I do?
 
-  Work with us to complete the book.
-
-  Translate high-quality content.
-
-  Give advise.
+  > * Work with us to complete the book.
+>
+  > * Translate high-quality content.
+>
+  > * Give advise.
 
 * W: Which tools?
 
@@ -99,13 +111,13 @@
 
 ### Note
 
-:warning: No commercial use. Thank you!
+:warning: No commercial use.
 
 # Release Note
 
 :notebook: 2021/10/22 Initialize in local git
 
-~
+...
 
 :books: 2022/10/22 Re-Initialize in Github
 
