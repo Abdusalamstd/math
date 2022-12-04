@@ -4,39 +4,36 @@
 
 * W: What it is?
 
-  This is a math note. The notes cover advanced mathematics, linear algebra, and probability theory.
+  This is a simple math book & including advanced mathematics, linear algebra, and probability theory.
 
-  * Content: Math & Algibra & Statics
+  * Content: Math & Algebra & Statics
 
-  * Language: Ug
+  * Language: ug
 
   * Document: $\LaTeX$ 
 
-  * Volume: 3
+  * Volume (Plan): 3
 
-    > * Math: 8
-    > * Algibra: 8
-    > * Statistics: 6
+    > * Math: 8 (up to 16)
+    > * Algebra: 8 (up to 10)
+    > * Statistics: 6 (up to 8)
 
 * H: How to use?
 
   > * for dev: clone this repository, and compile it using $Xe\LaTeX$ 
->
-  > * for use: view main.pdf
-
+  > * for use: view PDF document
 * H: What can I do?
 
-  > * Work with us to complete the book.
->
-  > * Translate high-quality content.
->
-  > * Give advise.
+  Work with me to complete the book, so:
 
+  > * Translate high-quality content.
+  >
+  > * Give advise.
 * W: Which tools?
 
   Powered by $\LaTeX$ 
 
-  *XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX)*
+  *$XeTeX$, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX)*
 
 ####  :books: Advanced Math and Linear Algebra
 
@@ -105,9 +102,9 @@
 
 > :email: Abdusalamstd@outlook.com​ for contact
 >
-> :fork_and_knife: fork this repository
+> :fork_and_knife: Fork this repository
 >
-> :bookmark_tabs: pull requests
+> :bookmark_tabs: Pull requests
 
 ### Note
 
@@ -120,4 +117,8 @@
 ...
 
 :books: 2022/10/22 Re-Initialize in Github
+
+:books: 2022/11 Update chapter-7(Hg)
+
+
 
